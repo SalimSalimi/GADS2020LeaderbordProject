@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">GADSLeaderbordProject</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description_hours">%1$d learning hours, %2$s</string>
 </resources>

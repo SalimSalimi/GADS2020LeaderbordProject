@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import dz.salim.salimi.gadsleaderbordproject.R
 import dz.salim.salimi.gadsleaderbordproject.data.models.Leader
 import dz.salim.salimi.gadsleaderbordproject.data.models.Learner
@@ -42,9 +43,10 @@ class LeaderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(leader: Leader) = with(leader) {
         nameTextView!!.text = name
-        if (this is Learner ) {
+        if (this is Learner) {
             leader as Learner
-            descriptionTextView!!.text = "${hours} learning hours, ${country}"
+            descriptionTextView!!.text = itemView.context.getString(R.string.description_hours, hours, country)
         }
+        Picasso.get().load(leader.badgeUrl).into(badgeImageView)
     }
 }
