@@ -26,7 +26,10 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = pagerAdapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = "Test $position"
+            when(position) {
+                0 -> tab.text = "Learning Leaders"
+                1 -> tab.text = "Skill IQ Leaders"
+            }
         }.attach()
     }
 }

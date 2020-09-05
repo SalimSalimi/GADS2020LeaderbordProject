@@ -10,12 +10,13 @@ import androidx.recyclerview.widget.RecyclerView
 import dz.salim.salimi.gadsleaderbordproject.R
 import dz.salim.salimi.gadsleaderbordproject.data.DataRepository
 import dz.salim.salimi.gadsleaderbordproject.data.models.Leader
+import dz.salim.salimi.gadsleaderbordproject.utils.LeaderType
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class LeadersFragment : Fragment() {
+class LeadersFragment(val leaderType: LeaderType) : Fragment() {
 
     private lateinit var leadersRecyclerView: RecyclerView
     private var linearLayoutManager: RecyclerView.LayoutManager? = null
@@ -34,9 +35,10 @@ class LeadersFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        getHoursLeaders()
-        getSkillIqLeaders()
-
+        when(leaderType) {
+            LeaderType.LEADER_HOUR -> getHoursLeaders()
+            LeaderType.LEADER_SKILLIQ -> getSkillIqLeaders()
+        }
         super.onViewCreated(view, savedInstanceState)
     }
 
