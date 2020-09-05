@@ -1,4 +1,4 @@
-package dz.salim.salimi.gadsleaderbordproject.data
+package dz.salim.salimi.gadsleaderbordproject.data.retrofit
 
 import android.telecom.Call
 import dz.salim.salimi.gadsleaderbordproject.data.models.Learner
