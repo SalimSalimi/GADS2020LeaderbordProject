@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import dz.salim.salimi.gadsleaderbordproject.data.DataRepository
 import dz.salim.salimi.gadsleaderbordproject.ui.LeadersFragment
 
 class MainActivity : AppCompatActivity() {
@@ -17,5 +18,6 @@ class MainActivity : AppCompatActivity() {
         leadersFragment = LeadersFragment()
         val fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.add(R.id.main_frame, leadersFragment, "Fragment").commit()
+
     }
 }

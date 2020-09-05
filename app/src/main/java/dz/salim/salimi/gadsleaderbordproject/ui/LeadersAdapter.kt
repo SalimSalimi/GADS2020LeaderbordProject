@@ -11,7 +11,7 @@ import dz.salim.salimi.gadsleaderbordproject.R
 import dz.salim.salimi.gadsleaderbordproject.data.models.Leader
 import dz.salim.salimi.gadsleaderbordproject.data.models.Learner
 
-class LeadersAdapter(private val leadersList: ArrayList<Leader>): RecyclerView.Adapter<LeaderViewHolder>() {
+class LeadersAdapter(private val leadersList: List<Leader>): RecyclerView.Adapter<LeaderViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LeaderViewHolder {
         val context: Context = parent.context
