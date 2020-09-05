@@ -16,7 +16,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class LeadersFragment(val leaderType: LeaderType) : Fragment() {
+class LeadersFragment(private val leaderType: LeaderType) : Fragment() {
 
     private lateinit var leadersRecyclerView: RecyclerView
     private var linearLayoutManager: RecyclerView.LayoutManager? = null
@@ -29,7 +29,6 @@ class LeadersFragment(val leaderType: LeaderType) : Fragment() {
 
         val rootView: View = inflater.inflate(R.layout.fragment_leaders, container, false)
         leadersRecyclerView = rootView.findViewById(R.id.leaders_list)
-
         return rootView
     }
 

@@ -2,13 +2,10 @@ package dz.salim.salimi.gadsleaderbordproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.FragmentTransaction
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import dz.salim.salimi.gadsleaderbordproject.ui.LeadersFragment
 import dz.salim.salimi.gadsleaderbordproject.ui.ViewPagerAdapter
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
