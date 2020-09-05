@@ -44,17 +44,7 @@ class LeadersFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        CoroutineScope(Dispatchers.IO).launch {
-            val response = DataRepository.getHoursLeaders()
-            if (response!!.isSuccessful) {
-                response.let {
-                    val adapter: LeadersAdapter = LeadersAdapter(it.body()!!)
-                    withContext(Dispatchers.Main) {
-                        setupUi(adapter)
-                    }
-                }
-            }
-        }
+        getSkillIqLeaders()
 
         super.onViewCreated(view, savedInstanceState)
     }
@@ -64,6 +54,34 @@ class LeadersFragment : Fragment() {
         leadersRecyclerView.apply {
             this.layoutManager = linearLayoutManager
             this.adapter = adapter
+        }
+    }
+
+    private fun getHoursLeaders() {
+        CoroutineScope(Dispatchers.IO).launch {
+            val response = DataRepository.getHoursLeaders()
+            if (response.isSuccessful) {
+                response.let {
+                    val adapter: LeadersAdapter = LeadersAdapter(it.body()!!)
+                    withContext(Dispatchers.Main) {
+                        setupUi(adapter)
+                    }
+                }
+            }
+        }
+    }
+
+    private fun getSkillIqLeaders() {
+        CoroutineScope(Dispatchers.IO).launch {
+            val response = DataRepository.getSkillLeaders()
+            if (response.isSuccessful) {
+                response.let {
+                    val adapter: LeadersAdapter = LeadersAdapter(it.body()!!)
+                    withContext(Dispatchers.Main) {
+                        setupUi(adapter)
+                    }
+                }
+            }
         }
     }
 }

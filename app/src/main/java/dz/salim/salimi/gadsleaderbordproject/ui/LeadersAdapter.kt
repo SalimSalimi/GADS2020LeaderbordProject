@@ -11,6 +11,7 @@ import com.squareup.picasso.Picasso
 import dz.salim.salimi.gadsleaderbordproject.R
 import dz.salim.salimi.gadsleaderbordproject.data.models.Leader
 import dz.salim.salimi.gadsleaderbordproject.data.models.Learner
+import dz.salim.salimi.gadsleaderbordproject.data.models.Skiller
 
 class LeadersAdapter(private val leadersList: List<Leader>): RecyclerView.Adapter<LeaderViewHolder>() {
 
@@ -46,6 +47,9 @@ class LeaderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         if (this is Learner) {
             leader as Learner
             descriptionTextView!!.text = itemView.context.getString(R.string.description_hours, hours, country)
+        } else if (this is Skiller) {
+            leader as Skiller
+            descriptionTextView!!.text = itemView.context.getString(R.string.description_skilliq, score, country)
         }
         Picasso.get().load(leader.badgeUrl).into(badgeImageView)
     }
