@@ -10,6 +10,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/google_africa_logo"
+            android:src="@drawable/gads"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
@@ -18,41 +30,49 @@
             android:text="@string/project_submission"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:textColor="@color/colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="100dp"
-            android:layout_height="75dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/gads"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/google_africa_logo" />
-
         <EditText
-            android:id="@+id/github_textview"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="@string/github_link"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/email_textview"
-            app:layout_constraintTop_toBottomOf="@+id/email_textview"/>
-
-        <EditText
-            android:id="@+id/email_textview"
+            android:id="@+id/full_name_textview"
+            style="@style/EditTextStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="@string/full_name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/last_name_textview"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <EditText
+            android:id="@+id/last_name_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="@string/last_name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/full_name_textview"
+            app:layout_constraintTop_toTopOf="@+id/full_name_textview"
+            style="@style/EditTextStyle"/>
+
+        <EditText
+            android:id="@+id/email_textview"
+            style="@style/EditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
             android:layout_marginEnd="8dp"
             android:ems="10"
             android:hint="@string/email"
@@ -62,32 +82,17 @@
             app:layout_constraintTop_toBottomOf="@+id/full_name_textview" />
 
         <EditText
-            android:id="@+id/last_name_textview"
+            android:id="@+id/github_textview"
+            style="@style/EditTextStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
+            android:hint="@string/github_link"
             android:inputType="textPersonName"
-            android:hint="@string/last_name"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/full_name_textview"
-            app:layout_constraintTop_toTopOf="@+id/full_name_textview" />
-
-        <EditText
-            android:id="@+id/full_name_textview"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="8dp"
-            android:ems="10"
-            android:hint="@string/full_name"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toStartOf="@+id/last_name_textview"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+            app:layout_constraintEnd_toEndOf="@+id/email_textview"
+            app:layout_constraintStart_toStartOf="@+id/email_textview"
+            app:layout_constraintTop_toBottomOf="@+id/email_textview" />
 
         <Button
             android:id="@+id/submit_button"
@@ -97,6 +102,9 @@
             android:text="@string/submit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/github_textview" />
+            app:layout_constraintTop_toBottomOf="@+id/github_textview"
+            android:background="@drawable/submit_button_shape"
+            android:textColor="#FFFFFF"
+            android:ems="7"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -1,10 +1,17 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">#F67C1E</item>
+        <item name="android:windowBackground">#000000</item>
     </style>
 
+    <style name="EditTextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#322F2F</item>
+        <item name="android:background">@drawable/edittext_shape</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>
