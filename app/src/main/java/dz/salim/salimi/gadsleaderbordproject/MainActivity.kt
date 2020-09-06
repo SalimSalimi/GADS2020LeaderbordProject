@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import dz.salim.salimi.gadsleaderbordproject.ui.ViewPagerAdapter
+import dz.salim.salimi.gadsleaderbordproject.ui.LeadersView.ViewPagerAdapter
 
 class MainActivity : AppCompatActivity() {
 

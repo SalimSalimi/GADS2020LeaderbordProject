@@ -1,4 +1,4 @@
-package dz.salim.salimi.gadsleaderbordproject.ui
+package dz.salim.salimi.gadsleaderbordproject.ui.LeadersView
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

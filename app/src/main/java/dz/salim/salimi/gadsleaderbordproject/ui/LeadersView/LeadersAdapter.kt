@@ -1,4 +1,4 @@
-package dz.salim.salimi.gadsleaderbordproject.ui
+package dz.salim.salimi.gadsleaderbordproject.ui.LeadersView
 
 import android.content.Context
 import android.view.LayoutInflater
