@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import dz.salim.salimi.gadsleaderbordproject.utils.LeaderType
 
-class ViewPagerAdapter(manager: FragmentActivity): FragmentStateAdapter(manager) {
+class ViewPagerAdapter(manager: Fragment): FragmentStateAdapter(manager) {
 
     override fun getItemCount(): Int = TAB_NUMBER
 
