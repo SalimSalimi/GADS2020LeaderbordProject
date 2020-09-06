@@ -50,7 +50,8 @@
             app:layout_constraintEnd_toStartOf="@+id/last_name_textview"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/last_name_textview"
@@ -64,7 +65,8 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/full_name_textview"
             app:layout_constraintTop_toTopOf="@+id/full_name_textview"
-            style="@style/EditTextStyle"/>
+            style="@style/EditTextStyle"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/email_textview"
@@ -76,10 +78,11 @@
             android:layout_marginEnd="8dp"
             android:ems="10"
             android:hint="@string/email"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/full_name_textview" />
+            app:layout_constraintTop_toBottomOf="@+id/full_name_textview"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/github_textview"
@@ -92,7 +95,8 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="@+id/email_textview"
             app:layout_constraintStart_toStartOf="@+id/email_textview"
-            app:layout_constraintTop_toBottomOf="@+id/email_textview" />
+            app:layout_constraintTop_toBottomOf="@+id/email_textview"
+            android:importantForAutofill="no" />
 
         <Button
             android:id="@+id/submit_button"
