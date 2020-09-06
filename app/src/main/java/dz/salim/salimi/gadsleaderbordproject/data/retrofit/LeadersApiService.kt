@@ -1,16 +1,17 @@
 package dz.salim.salimi.gadsleaderbordproject.data.retrofit
 
-import android.telecom.Call
 import dz.salim.salimi.gadsleaderbordproject.data.models.Learner
 import dz.salim.salimi.gadsleaderbordproject.data.models.Skiller
 import retrofit2.Response
 import retrofit2.http.GET
+import dz.salim.salimi.gadsleaderbordproject.utils.HOURS_LEADERS_ENDPOINTS
+import dz.salim.salimi.gadsleaderbordproject.utils.SKILLIQ_LEADERS_ENDPOINTS
 
 interface LeadersApiService {
 
-    @GET("/api/hours")
+    @GET(HOURS_LEADERS_ENDPOINTS)
     suspend fun getHoursLeaders(): Response<List<Learner>>
 
-    @GET("/api/skilliq")
+    @GET(SKILLIQ_LEADERS_ENDPOINTS)
     suspend fun getSkillIqLeaders(): Response<List<Skiller>>
 }

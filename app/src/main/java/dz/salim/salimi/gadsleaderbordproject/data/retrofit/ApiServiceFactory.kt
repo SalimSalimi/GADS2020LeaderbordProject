@@ -4,12 +4,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiServiceFactory {
-    private const val BASE_URL = "https://gadsapi.herokuapp.com/"
 
-    fun getInstance(): LeadersApiService {
-        return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+    fun <T> buildService(baseUrl: String, service: Class<T>): T =
+        Retrofit.Builder()
+            .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
-            .build().create(LeadersApiService::class.java)
-    }
+            .build().create(service)
 }
