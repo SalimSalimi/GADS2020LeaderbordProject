@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import dz.salim.salimi.gadsleaderbordproject.R
 import dz.salim.salimi.gadsleaderbordproject.data.DataRepository
 import dz.salim.salimi.gadsleaderbordproject.data.models.Form
@@ -24,6 +25,13 @@ class FormFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_form, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        submit_button.setOnClickListener {
+            onSubmitClickBtn()
+        }
+        super.onViewCreated(view, savedInstanceState)
+    }
+
     private fun postForm() {
         val email = email_textview.text.toString()
         val name = name_text_view.text.toString()
@@ -40,5 +48,20 @@ class FormFragment : Fragment() {
                 //TODO Implementing the logic
             }
         }
+    }
+
+    private fun confirmDialog() {
+        val dialogBuilder = AlertDialog.Builder(context!!)
+        val dialogLayout: View = LayoutInflater.from(context).inflate(R.layout.custom_confirm_dialog, null)
+
+        dialogBuilder.setView(dialogLayout)
+
+        val alertDialog = dialogBuilder.create()
+        alertDialog.show()
+
+    }
+
+    private fun onSubmitClickBtn() {
+        confirmDialog()
     }
 }
