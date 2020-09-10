@@ -55,9 +55,14 @@ class FormFragment : Fragment() {
 
     private fun confirmDialog() {
         val confirmDialog: AlertDialog = buildDialog(R.layout.custom_confirm_dialog)
-        confirmDialog.show()
-        confirmDialog.confirm_custom_button.setOnClickListener {
-            onConfirmBtnClicked()
+        confirmDialog.apply {
+            show()
+            confirm_custom_button.setOnClickListener {
+                onConfirmClickBtn()
+            }
+            cancel_button.setOnClickListener {
+                cancel()
+            }
         }
     }
 
@@ -87,9 +92,9 @@ class FormFragment : Fragment() {
 
     private fun onSubmitClickBtn() {
         confirmDialog()
-
     }
-    private fun onConfirmBtnClicked() {
+
+    private fun onConfirmClickBtn() {
         postForm()
     }
 }
