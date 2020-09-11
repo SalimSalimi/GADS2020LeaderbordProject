@@ -22,7 +22,7 @@ Some screenshots of the application
 #### Leaders SkillIQ
 ![Leaders SkillIQ](https://raw.githubusercontent.com/SalimSalimi/GADS2020LeaderbordProject/master/screenshots/leaders_skilliq.jpeg)
 #### Form
-![Form](https://raw.githubusercontent.com/SalimSalimi/GADS2020LeaderbordProject/master/screenshots/form.jpeg)
+![Form](https://raw.githubusercontent.com/SalimSalimi/GADS2020LeaderbordProject/master/screenshots/form.png)
 #### Form Confirmation
 ![Form Confirmation](https://raw.githubusercontent.com/SalimSalimi/GADS2020LeaderbordProject/master/screenshots/confirm_form.jpeg)
 #### Form Success
