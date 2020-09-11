@@ -1,19 +1,18 @@
-package dz.salim.salimi.gadsleaderbordproject
+package dz.salim.salimi.gadsleaderbordproject.ui.leadersView
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.WindowManager
-import android.widget.Toolbar
 import androidx.fragment.app.FragmentTransaction
-import dz.salim.salimi.gadsleaderbordproject.ui.LeadersView.LeadersTabFragment
+import dz.salim.salimi.gadsleaderbordproject.R
+import dz.salim.salimi.gadsleaderbordproject.ui.formView.FormActivity
 import dz.salim.salimi.gadsleaderbordproject.utils.SPLASH_DELAY_TIME
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
 import kotlinx.coroutines.*
 
-class MainActivity : AppCompatActivity() {
+class MainLeaderActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

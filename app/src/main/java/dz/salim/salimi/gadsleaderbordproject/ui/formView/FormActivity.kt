@@ -1,10 +1,10 @@
-package dz.salim.salimi.gadsleaderbordproject
+package dz.salim.salimi.gadsleaderbordproject.ui.formView
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.FragmentTransaction
-import dz.salim.salimi.gadsleaderbordproject.ui.FormView.FormFragment
+import dz.salim.salimi.gadsleaderbordproject.R
 
 class FormActivity : AppCompatActivity() {
 

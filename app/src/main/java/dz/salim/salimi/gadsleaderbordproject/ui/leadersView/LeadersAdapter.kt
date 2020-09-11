@@ -1,4 +1,4 @@
-package dz.salim.salimi.gadsleaderbordproject.ui.LeadersView
+package dz.salim.salimi.gadsleaderbordproject.ui.leadersView
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -42,13 +42,11 @@ class LeaderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         badgeImageView = itemView.findViewById(R.id.badge_image_view)
     }
 
-    fun bind(leader: Leader) = with(leader) {
+    fun <T : Leader> bind(leader: T) = with(leader) {
         nameTextView!!.text = name
         if (this is Learner) {
-            leader as Learner
             descriptionTextView!!.text = itemView.context.getString(R.string.description_hours, hours, country)
         } else if (this is Skiller) {
-            leader as Skiller
             descriptionTextView!!.text = itemView.context.getString(R.string.description_skilliq, score, country)
         }
         Picasso.get().load(leader.badgeUrl).into(badgeImageView)

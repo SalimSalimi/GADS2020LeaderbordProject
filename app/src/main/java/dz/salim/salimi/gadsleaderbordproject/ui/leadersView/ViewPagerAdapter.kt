@@ -1,4 +1,4 @@
-package dz.salim.salimi.gadsleaderbordproject.ui.LeadersView
+package dz.salim.salimi.gadsleaderbordproject.ui.leadersView
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter

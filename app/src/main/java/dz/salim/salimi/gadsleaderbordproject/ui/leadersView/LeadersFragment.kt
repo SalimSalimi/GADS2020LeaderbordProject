@@ -1,4 +1,4 @@
-package dz.salim.salimi.gadsleaderbordproject.ui.LeadersView
+package dz.salim.salimi.gadsleaderbordproject.ui.leadersView
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,13 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dz.salim.salimi.gadsleaderbordproject.R
 import dz.salim.salimi.gadsleaderbordproject.data.DataRepository
 import dz.salim.salimi.gadsleaderbordproject.data.models.Leader
-import dz.salim.salimi.gadsleaderbordproject.data.models.Learner
 import dz.salim.salimi.gadsleaderbordproject.utils.LeaderType
 import dz.salim.salimi.gadsleaderbordproject.utils.isOnline
 import kotlinx.android.synthetic.main.fragment_leaders.*

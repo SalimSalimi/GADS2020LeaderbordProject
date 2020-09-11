@@ -1,4 +1,4 @@
-package dz.salim.salimi.gadsleaderbordproject.ui.LeadersView
+package dz.salim.salimi.gadsleaderbordproject.ui.leadersView
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,7 +9,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import dz.salim.salimi.gadsleaderbordproject.R
-import dz.salim.salimi.gadsleaderbordproject.ui.LeadersView.ViewPagerAdapter
 
 class LeadersTabFragment : Fragment() {
 
