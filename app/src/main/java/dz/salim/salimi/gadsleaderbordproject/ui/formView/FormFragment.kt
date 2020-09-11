@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.fragment_form.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class FormFragment : Fragment() {
 
@@ -46,10 +47,12 @@ class FormFragment : Fragment() {
 
         CoroutineScope(Dispatchers.IO).launch {
             val response = DataRepository.postForm(form)
-            if (response.isSuccessful) {
-                resultDialog(SubmitResult.SUCCESS)
-            } else {
-                resultDialog(SubmitResult.FAILED)
+            withContext(Dispatchers.Main) {
+                if (response.isSuccessful) {
+                    resultDialog(SubmitResult.SUCCESS)
+                } else {
+                    resultDialog(SubmitResult.FAILED)
+                }
             }
         }
     }
