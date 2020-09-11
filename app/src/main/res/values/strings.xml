@@ -2,7 +2,7 @@
     <string name="app_name">Leaders</string>
     <string name="description_hours">%1$d learning hours, %2$s</string>
     <string name="description_skilliq">%1$d skill IQ score, %2$s</string>
-    <string name="full_name">Full Name</string>
+    <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="email">Email Address</string>
     <string name="github_link">Project on GITHUB (link)</string>

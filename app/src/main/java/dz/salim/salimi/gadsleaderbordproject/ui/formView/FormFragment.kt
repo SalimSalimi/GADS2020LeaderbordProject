@@ -13,7 +13,6 @@ import dz.salim.salimi.gadsleaderbordproject.utils.SubmitResult
 import kotlinx.android.synthetic.main.custom_confirm_dialog.*
 import kotlinx.android.synthetic.main.custom_result_confirm_dialog.*
 import kotlinx.android.synthetic.main.fragment_form.*
-import kotlinx.android.synthetic.main.leader_list_item.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -38,10 +37,10 @@ class FormFragment : Fragment() {
     }
 
     private fun postForm() {
-        val email = email_textview.text.toString()
-        val name = name_text_view.text.toString()
-        val lastName = last_name_textview.text.toString()
-        val githubLink = github_textview.text.toString()
+        val email = email_edittext.text.toString()
+        val name = first_name_edittext.text.toString()
+        val lastName = last_name_edittext.text.toString()
+        val githubLink = github_edittext.text.toString()
 
         val form = Form(email, name, lastName, githubLink)
 

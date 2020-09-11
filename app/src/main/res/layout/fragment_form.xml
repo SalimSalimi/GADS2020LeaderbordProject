@@ -47,7 +47,7 @@
             android:background="@drawable/custom_underline"/>
 
         <EditText
-            android:id="@+id/full_name_textview"
+            android:id="@+id/first_name_edittext"
             style="@style/EditTextStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -55,16 +55,16 @@
             android:layout_marginTop="48dp"
             android:layout_marginEnd="8dp"
             android:ems="10"
-            android:hint="@string/full_name"
+            android:hint="@string/first_name"
             android:inputType="textPersonName"
-            app:layout_constraintEnd_toStartOf="@+id/last_name_textview"
+            app:layout_constraintEnd_toStartOf="@+id/last_name_edittext"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             android:importantForAutofill="no" />
 
         <EditText
-            android:id="@+id/last_name_textview"
+            android:id="@+id/last_name_edittext"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -73,13 +73,13 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/full_name_textview"
-            app:layout_constraintTop_toTopOf="@+id/full_name_textview"
+            app:layout_constraintStart_toEndOf="@+id/first_name_edittext"
+            app:layout_constraintTop_toTopOf="@+id/first_name_edittext"
             style="@style/EditTextStyle"
             android:importantForAutofill="no" />
 
         <EditText
-            android:id="@+id/email_textview"
+            android:id="@+id/email_edittext"
             style="@style/EditTextStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -91,11 +91,11 @@
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/full_name_textview"
+            app:layout_constraintTop_toBottomOf="@+id/first_name_edittext"
             android:importantForAutofill="no" />
 
         <EditText
-            android:id="@+id/github_textview"
+            android:id="@+id/github_edittext"
             style="@style/EditTextStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -103,9 +103,9 @@
             android:ems="10"
             android:hint="@string/github_link"
             android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="@+id/email_textview"
-            app:layout_constraintStart_toStartOf="@+id/email_textview"
-            app:layout_constraintTop_toBottomOf="@+id/email_textview"
+            app:layout_constraintEnd_toEndOf="@+id/email_edittext"
+            app:layout_constraintStart_toStartOf="@+id/email_edittext"
+            app:layout_constraintTop_toBottomOf="@+id/email_edittext"
             android:importantForAutofill="no" />
 
         <Button
@@ -116,7 +116,7 @@
             android:text="@string/submit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/github_textview"
+            app:layout_constraintTop_toBottomOf="@+id/github_edittext"
             android:background="@drawable/submit_button_shape"
             android:textColor="#FFFFFF"
             android:ems="7"/>
