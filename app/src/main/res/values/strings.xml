@@ -16,4 +16,5 @@
     <string name="submission_successful">Submission Successful</string>
     <string name="are_you_sure">Are you sure ?</string>
     <string name="yes">Yes</string>
+    <string name="no_internet">No connection Internet, please check your internet</string>
 </resources>

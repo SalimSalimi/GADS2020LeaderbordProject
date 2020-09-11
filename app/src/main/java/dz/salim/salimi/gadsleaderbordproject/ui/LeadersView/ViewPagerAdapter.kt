@@ -1,9 +1,9 @@
 package dz.salim.salimi.gadsleaderbordproject.ui.LeadersView
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import dz.salim.salimi.gadsleaderbordproject.utils.LeaderType
+import dz.salim.salimi.gadsleaderbordproject.utils.TAB_NUMBER
 
 class ViewPagerAdapter(manager: Fragment): FragmentStateAdapter(manager) {
 
@@ -16,9 +16,5 @@ class ViewPagerAdapter(manager: Fragment): FragmentStateAdapter(manager) {
             1 ->  LeadersFragment(LeaderType.LEADER_SKILLIQ)
             else ->  LeadersFragment(LeaderType.LEADER_HOUR)
         }
-    }
-
-    companion object {
-        const val TAB_NUMBER: Int = 2
     }
 }
