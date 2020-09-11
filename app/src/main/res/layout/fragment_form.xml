@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.FormView.FormFragment"
-    android:background="#000000">
+    android:background="@android:color/transparent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:layout_height="80dp"
             android:layout_marginTop="16dp"
             android:contentDescription="@string/google_africa_logo"
-            android:src="@drawable/gads"
+            android:src="@drawable/gads_nobackground"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
