@@ -20,6 +20,8 @@ import kotlinx.coroutines.launch
 
 class FormFragment : Fragment() {
 
+    private var confirmDialog: AlertDialog? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -54,8 +56,8 @@ class FormFragment : Fragment() {
     }
 
     private fun confirmDialog() {
-        val confirmDialog: AlertDialog = buildDialog(R.layout.custom_confirm_dialog)
-        confirmDialog.apply {
+        confirmDialog = buildDialog(R.layout.custom_confirm_dialog)
+        confirmDialog!!.apply {
             show()
             confirm_custom_button.setOnClickListener {
                 onConfirmClickBtn()
@@ -95,6 +97,7 @@ class FormFragment : Fragment() {
     }
 
     private fun onConfirmClickBtn() {
+        confirmDialog!!.cancel()
         postForm()
     }
 }
