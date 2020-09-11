@@ -17,3 +17,5 @@ const val NAME_ENCODED_FIELD: String = "entry.1877115667"
 const val LAST_NAME_ENCODED_FIELD: String = "entry.2006916086"
 const val GITHUB_LINK_ENCODED_FIELD: String = "entry.284483984"
 
+//Splash Delay Time
+const val SPLASH_DELAY_TIME: Long = 3000

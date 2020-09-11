@@ -8,8 +8,10 @@ import android.view.WindowManager
 import android.widget.Toolbar
 import androidx.fragment.app.FragmentTransaction
 import dz.salim.salimi.gadsleaderbordproject.ui.LeadersView.LeadersTabFragment
+import dz.salim.salimi.gadsleaderbordproject.utils.SPLASH_DELAY_TIME
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
+import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +21,10 @@ class MainActivity : AppCompatActivity() {
         submit_button_toolbar.setOnClickListener {
             onSubmitToolbarBtnClicked()
         }
-        //setupLeaderFragment()
+        CoroutineScope(Dispatchers.Main).launch {
+            delay(SPLASH_DELAY_TIME)
+            setupLeaderFragment()
+        }
     }
 
     private fun setupLeaderFragment() {
