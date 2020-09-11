@@ -23,12 +23,12 @@
         android:layout_width="360dp"
         android:layout_height="360dp"
         android:contentDescription="@string/google_africa_logo"
-        app:layout_constraintBottom_toBottomOf="@+id/main_frame"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:srcCompat="@drawable/gads" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gads_nobackground" />
 
     <FrameLayout
         android:id="@+id/main_frame"

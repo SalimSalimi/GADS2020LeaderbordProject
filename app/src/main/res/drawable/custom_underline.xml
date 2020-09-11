@@ -4,8 +4,7 @@
     android:shape="rectangle">
     <size
         android:height="2dp"
-        android:width="25dp"
-        />
+        android:width="25dp"/>
     <gradient
         android:angle="180"
         android:centerColor="@color/colorAccent"

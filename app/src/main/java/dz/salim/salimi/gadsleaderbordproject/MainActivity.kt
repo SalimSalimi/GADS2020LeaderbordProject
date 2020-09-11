@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         submit_button_toolbar.setOnClickListener {
             onSubmitToolbarBtnClicked()
         }
-        setupLeaderFragment()
+        //setupLeaderFragment()
     }
 
     private fun setupLeaderFragment() {
